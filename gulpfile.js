@@ -66,6 +66,7 @@ gulp.task("bundle-css-libs", function(){
     var dest = "./public/css";
     return gulp.src(src)
         .pipe($.concat("bundle-css-libs.css"))
+        .pipe($.cssmin())
         .pipe(gulp.dest(dest));
 });
 
