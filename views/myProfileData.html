@@ -1,0 +1,21 @@
+<div class="userInfo">
+    <h3>Profile informations</h3>
+    <table>
+        <tr>
+            <td>Fullname : </td>
+            <td>{{userData.name}}</td>
+        </tr>
+        <tr>
+            <td>Email : </td>
+            <td>{{userData.email}}</td>
+        </tr>
+        <tr>
+            <td>Registration date : </td>
+            <td>{{userData.regDate | date : 'M/d/yyyy HH:mm:ss'}}</td>
+        </tr>
+        <tr>
+            <td>Last modified : </td>
+            <td>{{userData.modDate | date : 'M/d/yyyy HH:mm:ss'}}</td>
+        </tr>
+    </table>
+</div>

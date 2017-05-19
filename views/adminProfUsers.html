@@ -1,0 +1,16 @@
+<div class="users">
+    <table>
+        <th>Fullname</th>
+        <th>Email</th>
+        <th>Registration Date</th>
+        <th>Last Modified</th>
+        <th>Role</th>
+        <tr ng-repeat="str in storage" ng-click="link(str)" link-used>
+            <td>{{str.name}}</td>
+            <td>{{str.email}}</td>
+            <td>{{str.regDate | date : 'M/d/yyyy HH:mm:ss'}}</td>
+            <td>{{str.modDate | date : 'M/d/yyyy HH:mm:ss'}}</td>
+            <td>{{str.role}}</td>
+        </tr>
+    </table>
+</div>

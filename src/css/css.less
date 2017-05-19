@@ -1,0 +1,1199 @@
+@import "vars.less";
+html,
+body {
+    .padding;
+    .margin;
+    font-family: 'Lato', sans-serif;
+    .color(@color);
+    overflow: hidden;
+    .fontSize(@fontSize);
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+}
+
+input,
+select,
+a,
+button,
+a:hover,
+a:active,
+a:focus {
+    outline: none;
+    transition: box-shadow 0.5s linear;
+}
+
+input:focus, select:focus {
+    box-shadow: 0px 3px 5px darken(@backgroundColor, 15%);
+}
+
+::-webkit-input-placeholder {
+    .color(@backgroundColor);
+}
+
+:-moz-placeholder {
+    .color(@backgroundColor);
+    opacity: 1;
+}
+
+::-moz-placeholder {
+    .color(@backgroundColor);
+    opacity: 1;
+}
+
+:-ms-input-placeholder {
+    .color(@backgroundColor);
+}
+
+:-o-input-placeholder {
+    .color(@backgroundColor);
+}
+
+.nav-bar {
+    .divSize(94.4%, 60px);
+    .backgroundColorDiv(#fff);
+    .color(@backgroundColor);
+    .padding(15px, 20px, 0px, 60px);
+}
+
+.nav-bar-name {
+    .float(left);
+    i {
+        .iStyle;
+    }
+    span {
+        .margin(-10px, 0px, 0px, 10px);
+    }
+}
+
+.nav-bar-menu {
+    .float(right);
+    display: inline-block;
+    ul {
+        list-style: none;
+        .margin;
+        li {
+            display: inline-block;
+            .margin(0px, 20px, 0, 10px);
+            a {
+                text-decoration: none;
+                .color(@backgroundColor);
+                transition: 0.5s color linear;
+                &:hover {
+                    .color(@color);
+                }
+            }
+            i {
+                .iStyle;
+            }
+        }
+    }
+}
+
+.left-side {
+    .float(left);
+    clear: both;
+    .divSize(10%;
+    89.5%);
+    .backgroundColorDiv(#fff);
+    .margin(-2px, 0px, 0px, 0px);
+    div {
+        .margin(40px, 0px, 0px, 0px);
+        text-align: center;
+        i {
+            .color(@backgroundColor);
+            .iStyle;
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+hr {
+    margin: 0;
+    width: 100%;
+    .border(0.5px, @backgroundColor)
+}
+
+.ui.ng-enter,
+.ui-child.ng-enter {
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.ui.ng-enter.ng-enter-active,
+.ui-child.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.ui.ng-leave,
+.ui-child.ng-leave {
+    transition: 1s linear all;
+    opacity: 0;
+}
+
+.ui.ng-leave.ng-enter-leave,
+.ui-child.ng-leave.ng-enter-leave {
+    opacity: 1;
+}
+
+.login,
+.signup {
+    .divSize(40%, 220px);
+    background: linear-gradient(-90deg, white, @backgroundColor);
+    .padding(45px, 0px, 15px, 0);
+    .color(#fff);
+    margin: 0 auto;
+    .margin(-40%, 0px, 0px, 30%);
+    text-align: center;
+    .border(1px, @color);
+    border-right: none;
+    .borderRad(10px);
+    animation: formAnim 2s forwards;
+    animation-delay: 0.5s;
+    input {
+        background: linear-gradient(-10deg, white, @backgroundColor);
+        .divSize(50%, 30px);
+        .padding(0px;
+        0px;
+        0px;
+        25px);
+        .margin(0px, 0px, 30px, 0px);
+        border: 0;
+        .fontSize(0.9rem);
+        .borderRad(10px);
+        .backgroundColorDiv(@backgroundColor);
+        .color(@color);
+    }
+    p {
+        .margin(-25px, 0px, 0px, 0px);
+        color: darken(@backgroundColor, 25%);
+    }
+    div {
+        height: 80px;
+    }
+}
+
+.btn,
+.btn-create {
+    .divSize(25%, 30px);
+    text-align: center;
+    .border(1px, #fff);
+    .color(@backgroundColor);
+    font-weight: 900;
+    .fontSize(0.7rem);
+    .borderRad(10px);
+    .backgroundColorDiv(#fff);
+    .margin(0px, 0px, 50px, 0px);
+    transition: 0.5s linear all;
+    &:hover {
+        border-color: @backgroundColor;
+        .backgroundColorDiv(@backgroundColor);
+        .color(#fff);
+        cursor: pointer;
+    }
+}
+
+.btn-create {
+    clear: both;
+    width: 10%;
+    .margin(30px, 0px, 0px, 36%);
+}
+
+.signup {
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.signupDiv,
+.loginDiv {
+    .divSize(100px, 80px);
+    opacity: 0;
+    .margin(0px, 0px, 0px, 46.5%);
+    .color(@backgroundColor);
+    text-align: center;
+    animation: signupDivAnim 2s forwards;
+    animation-delay: 1s;
+    i {
+        .fontSize(1.5rem);
+        .color(@backgroundColor);
+        transition: color 1s linear;
+        &:hover {
+            .color(darken(@backgroundColor, 15%));
+        }
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+.loginDiv {
+    margin-top: 25px;
+}
+
+@keyframes signupDivAnim {
+    0% {
+        margin-top: 80%;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1
+    }
+}
+
+@-moz-keyframes signupDivAnim {
+    0% {
+        margin-top: 80%;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1
+    }
+}
+
+@-webkit-keyframes signupDivAnim {
+    0% {
+        margin-top: 80%;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1
+    }
+}
+
+@-ms-keyframes signupDivAnim {
+    0% {
+        margin-top: 80%;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1
+    }
+}
+
+@-o-keyframes signupDivAnim {
+    0% {
+        margin-top: 80%;
+        opacity: 0;
+    }
+    100% {
+        margin-top: 0;
+        opacity: 1
+    }
+}
+
+.info,
+.wrong {
+    .fontSize(@fontSize - 6);
+    color: darken(@backgroundColor, 15%);
+}
+
+.info.ng-enter,
+.wrong.ng-enter {
+    transition: 0.7s linear all;
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+.info.ng-enter-active,
+.wrong.ng-enter-active {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.info.ng-leave,
+.wrong.ng-leave {
+    transition: 0.7s linear all;
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+.info.ng-leave.ng-leave-active,
+.info.ng-leave.ng-leave-active {
+    opacity: 0;
+    transform: translateX(-40px)
+}
+
+@keyframes formAnim {
+    0% {
+        opacity: 0;
+        margin-top: -40%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10%;
+    }
+}
+
+@-moz-keyframes formAnim {
+    0% {
+        opacity: 0;
+        margin-top: -40%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10%;
+    }
+}
+
+@-webkit-keyframes formAnim {
+    0% {
+        opacity: 0;
+        margin-top: -40%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10%;
+    }
+}
+
+@-ms-keyframes formAnim {
+    0% {
+        opacity: 0;
+        margin-top: -40%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10%;
+    }
+}
+
+@-o-keyframes formAnim {
+    0% {
+        opacity: 0;
+        margin-top: -40%;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 10%;
+    }
+}
+
+.users {
+    width: 90%;
+    margin: 50px auto;
+    table {
+        width: 100%;
+        text-align: center;
+        border-collapse: collapse;
+        tr {
+            transition: 0.5s background-color linear;
+            &:hover {
+                background-color: darken(#fff, 5%);
+                cursor: pointer;
+            }
+        }
+        th,
+        td {
+            .padding(10px, 0px, 10px, 0px);
+            border-bottom: 1px solid #ddd;
+        }
+        td {
+            .fontSize(0.9rem);
+        }
+        i {
+            .color(@backgroundColor);
+            .iStyle;
+            .margin(0px, 10px, 0px, 10px);
+            .fontSize(1.2rem);
+        }
+        a {
+            text-decoration: none;
+            .color(@color);
+        }
+    }
+}
+
+.userInfo {
+    .divSize(40%, 400px);
+    .margin(50px, 30%, 0px, 30%);
+    text-align: center;
+    table {
+        width: 90%;
+        .margin(0px, 0%, 0px, 10%);
+        tr {
+            border-bottom: 1px solid black;
+        }
+        td {
+            text-align: left;
+        }
+        a {
+            text-decoration: none;
+        }
+    }
+    i {
+        .color(@backgroundColor);
+        .iStyle;
+        .margin(0px, 10px, 0px, 10px);
+        .fontSize(1.2rem);
+    }
+    div {
+        .border(1px, @backgroundColor);
+        text-align: center;
+        .margin(30px, 0, 0, 0);
+        transition: 0.5s border-color linear;
+        transition: 0.2s color linear;
+        &:hover {
+            border-color: @color;
+            color: @backgroundColor;
+        }
+    }
+}
+
+.edit {
+    width: 40%;
+    margin: 50px auto;
+    text-align: center;
+    div {
+        .divSize(80%, 50px);
+        .margin(30px, 10%, 30px, 10%);
+        input, select {
+            .divSize(100%, 30px);
+            .fontSize(0.8rem);
+            outline: 0;
+            .color(@backgroundColor);
+            background: transparent;
+            border: 0;
+            box-shadow: 0px 1px @backgroundColor;
+            transition: box-shadow 1s linear;
+            &:focus {
+                box-shadow: 0px 2px @backgroundColor;
+            }
+        }
+    }
+}
+
+.btn-edit {
+    .divSize(25%, 35px);
+    .margin(20px, 30%, 0px, 30%);
+    .border(1px, @backgroundColor);
+    .backgroundColorDiv(#fff);
+    text-align: center;
+    transition: 0.5s border-color linear;
+    transition: 0.2s color linear;
+    &:hover {
+        border-color: @color;
+        color: @backgroundColor;
+        cursor: pointer;
+    }
+}
+
+.linkIn {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 2px;
+    animation: linkIn 1s forwards;
+}
+
+@keyframes linkIn {
+    0% {
+        border-bottom: 1px solid #fff;
+    }
+    100% {
+        border-bottom: 1px solid @color;
+    }
+}
+
+@-moz-keyframes linkIn {
+    0% {
+        border-bottom: 1px solid #fff;
+    }
+    100% {
+        border-bottom: 1px solid @color;
+    }
+}
+
+@-webkit-keyframes linkIn {
+    0% {
+        border-bottom: 1px solid #fff;
+    }
+    100% {
+        border-bottom: 1px solid @color;
+    }
+}
+
+@-ms-keyframes linkIn {
+    0% {
+        border-bottom: 1px solid #fff;
+    }
+    100% {
+        border-bottom: 1px solid @color;
+    }
+}
+
+@-o-keyframes linkIn {
+    0% {
+        border-bottom: 1px solid #fff;
+    }
+    100% {
+        border-bottom: 1px solid @color;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .btn,
+    .btn-create {
+        width: 30%;
+    }
+    .loginDiv,
+    .signupDiv {
+        margin-left: 47.5%;
+    }
+    .userInfo {
+        width: 50%;
+        .margin(50px, 25%, 0, 25%);
+        table {
+            margin-left: 25%;
+            width: 60%;
+        }
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1024px) {
+    .btn,
+    .btn-create {
+        width: 30%;
+    }
+    .loginDiv,
+    .signupDiv {
+        margin-left: 44.8%;
+    }
+    .userInfo {
+        width: 60%;
+        .margin(50px, 20%, 0, 20%);
+        table {
+            margin-left: 10%;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .nav-bar {
+        padding-left: 30px;
+        font-size: 0.9rem;
+    }
+    .login,
+    .signup {
+        margin-left: 18%;
+        width: 60%;
+        margin-top: -50%;
+        animation: formAnim 2s forwards;
+        input {
+            width: 60%;
+        }
+        .btn,
+        .btn-create {
+            width: 30%;
+        }
+    }
+    .users {
+        table {
+            width: 100%;
+            tr {
+                font-size: 0.8rem;
+            }
+            td {
+                font-size: 0.6rem;
+            }
+        }
+    }
+    .signupDiv,
+    .loginDiv {
+        margin-left: 41%;
+    }
+    .userInfo {
+        width: 70%;
+        .margin(50px, 15%, 0, 15%);
+        font-size: 0.9rem;
+        table {
+            width: 90%;
+            margin-left: 10%;
+        }
+    }
+    .edit {
+        width: 80%;
+    }
+    .toast-top-right {
+        margin-right: -200px;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 767px) {
+    .nav-bar {
+        padding-left: 30px;
+        font-size: 0.9rem;
+    }
+    .login,
+    .signup {
+        margin-left: 18%;
+        width: 60%;
+        margin-top: -50%;
+        animation: formAnim 2s forwards;
+        input {
+            width: 70%;
+        }
+        .btn,
+        .btn-create {
+            width: 40%;
+        }
+    }
+    .users {
+        table {
+            width: 100%;
+            tr {
+                font-size: 0.6rem;
+            }
+            td {
+                font-size: 0.5rem;
+            }
+        }
+    }
+    .signupDiv,
+    .loginDiv {
+        margin-left: 39%;
+    }
+    .userInfo {
+        width: 80%;
+        .margin(50px, 10%, 0, 10%);
+        font-size: 0.8rem;
+        table {
+            width: 90%;
+            margin-left: 10%;
+        }
+    }
+    .edit {
+        width: 80%;
+    }
+    .toast-top-right {
+        margin-right: -200px;
+    }
+    @keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -40%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-moz-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-webkit-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-ms-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-o-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+}
+
+@media only screen and (min-width: 560px) and (max-width: 639px) {
+    .nav-bar {
+        padding-left: 30px;
+        font-size: 0.9rem;
+    }
+    .login,
+    .signup {
+        margin-left: 18%;
+        width: 60%;
+        margin-top: -50%;
+        animation: formAnim 2s forwards;
+        input {
+            width: 70%;
+        }
+        .btn,
+        .btn-create {
+            width: 40%;
+        }
+    }
+    .users {
+        table {
+            width: 100%;
+            tr {
+                font-size: 0.6rem;
+            }
+            td {
+                font-size: 0.5rem;
+            }
+        }
+    }
+    .signupDiv,
+    .loginDiv {
+        margin-left: 39%;
+    }
+    .userInfo {
+        width: 80%;
+        .margin(50px, 10%, 0, 10%);
+        font-size: 0.8rem;
+        table {
+            width: 90%;
+            margin-left: 10%;
+        }
+    }
+    .edit {
+        width: 80%;
+    }
+    .toast-top-right {
+        margin-right: -200px;
+    }
+    @keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -40%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-moz-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-webkit-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-ms-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-o-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 559px) {
+    .nav-bar {
+        padding-left: 30px;
+        font-size: 0.9rem;
+    }
+    .login,
+    .signup {
+        margin-left: 18%;
+        width: 60%;
+        margin-top: -50%;
+        animation: formAnim 2s forwards;
+        input {
+            width: 70%;
+        }
+        .btn,
+        .btn-create {
+            width: 40%;
+        }
+    }
+    .nav-bar {
+      font-size: 0.7rem;
+    }
+    .users {
+        table {
+            width: 100%;
+            tr {
+                font-size: 0.6rem;
+            }
+            td {
+                font-size: 0.5rem;
+            }
+        }
+    }
+    .signupDiv,
+    .loginDiv {
+        margin-left: 39%;
+    }
+    .userInfo {
+        width: 80%;
+        .margin(50px, 10%, 0, 10%);
+        font-size: 0.8rem;
+        table {
+            width: 90%;
+            margin-left: 10%;
+        }
+    }
+    .edit {
+        width: 80%;
+    }
+    .toast-top-right {
+        margin-right: -200px;
+    }
+    @keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -40%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-moz-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-webkit-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-ms-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-o-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+}
+
+@media only screen and (min-width: 380px) and (max-width: 479px) {
+    .nav-bar {
+        padding-left: 20px;
+        font-size: 0.8rem;
+        ul {
+            li {
+                margin-right: 5px;
+                a {
+                    i {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        i {
+            font-size: 1rem;
+        }
+        .nav-bar-name {
+            margin-top: 15px;
+        }
+        .nav-bar-menu {
+            margin-top: 15px;
+            font-size:0.6rem;
+
+            ul {
+                font-size: 0.6rem;
+                padding-left:0;
+
+            }
+        }
+    }
+    .login,
+    .signup {
+        margin-left: 18%;
+        width: 60%;
+        margin-top: -50%;
+        animation: formAnim 2s forwards;
+        input {
+            width: 70%;
+        }
+        .btn,
+        .btn-create {
+            width: 40%;
+        }
+    }
+    .users {
+        table {
+            width: 100%;
+            tr {
+                font-size: 0.5rem;
+            }
+            td {
+                font-size: 0.5rem;
+            }
+        }
+    }
+    .signupDiv,
+    .loginDiv {
+        margin-left: 37%;
+    }
+    .userInfo {
+        width: 90%;
+        .margin(50px, 5%, 0, 5%);
+        font-size: 0.7rem;
+        table {
+            width: 90%;
+            margin-left: 10%;
+        }
+        div {
+            i {
+                font-size: 0.9rem;
+            }
+        }
+    }
+    .edit {
+        width: 90%;
+        font-size: 0.8rem;
+    }
+    .toast-top-right {
+        margin-right: -100px;
+    }
+    @keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -40%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-moz-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-webkit-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-ms-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-o-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 379px) {
+    .nav-bar {
+        padding-left: 5px;
+        font-size: 0.6rem;
+        ul {
+            li {
+                margin-right: 5px;
+                a {
+                    i {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+        i {
+            font-size: 1rem;
+        }
+        
+        .nav-bar-name {
+            margin-top: 15px;
+        }
+        .nav-bar-menu {
+            margin-top: 15px;
+            ul {
+                padding-left:0;
+                li {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    .login,
+    .signup {
+        margin-left: 5%;
+        width: 90%;
+        margin-top: -50%;
+        animation: formAnim 2s forwards;
+        input {
+            width: 70%;
+        }
+        .btn,
+        .btn-create {
+            width: 40%;
+        }
+    }
+    .users {
+        width: 100%;
+        table {
+            width: 100%;
+            tr {
+                font-size: 0.4rem;
+            }
+            td {
+                font-size: 0.4rem;
+            }
+        }
+    }
+    .signupDiv,
+    .loginDiv {
+        margin-left: 35%;
+    }
+    .userInfo {
+        width: 90%;
+        .margin(50px, 5%, 0, 5%);
+        font-size: 0.5rem;
+        table {
+            width:80%;
+            margin-left: 15%;
+        }
+        div {
+            i {
+                font-size: 0.9rem;
+            }
+            font-size:0.8rem;
+        }
+    }
+    .edit {
+        width: 100%;
+        font-size: 0.7rem;
+    }
+    .toast-top-right {
+        margin-right: -150px;
+    }
+    @keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -40%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-moz-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-webkit-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+    @-ms-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+    }
+        }
+    @-o-keyframes formAnim {
+        0% {
+            opacity: 0;
+            margin-top: -50%;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 20%;
+        }
+    }
+}

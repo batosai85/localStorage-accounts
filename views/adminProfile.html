@@ -1,0 +1,16 @@
+<nav>
+    <div class="nav-bar">
+        <div class="nav-bar-name">
+            <i class="ion-android-person" style="color:#FF8C00;"></i>
+            <span>{{userData.name}}</span>
+        </div>
+        <div class="nav-bar-menu">
+            <ul>
+                <li><a ui-sref="admin-profile.users" class="linkIn" link-used>List Users</a></li>
+                <li><a ng-click="logout()"><i class="ion-log-out" ng-click="logout()"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<hr/>
+<div ui-view class="ui-child"></div>

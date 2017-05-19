@@ -1,0 +1,49 @@
+@color : #3d496d;
+@backgroundColor : #23adbe;
+@fontSize : 24px;
+
+
+.color(@a){
+    color : @a;
+}
+.iStyle{
+    font-size: @fontSize + 10;
+    transition:  0.3s text-shadow linear;
+
+    &:hover {
+        text-shadow: #475073 0 0 10px;
+        cursor : pointer;
+    }
+}
+.backgroundColorDiv(@bgColor) {
+    background-color : @bgColor;
+}
+.divSize(@wid;@hei){
+    width: @wid;
+    height: @hei;
+}
+.borderRad(@rad){
+    border-radius: @rad;
+}
+.float(@a){
+    float:@a;
+}
+.padding(@a:0px;@b:0px;@c:0px;@d:0px){
+    padding-top:@a;
+    padding-right:@b;
+    padding-bottom:@c;
+    padding-left:@d;
+}
+.margin(@a:0px;@b:0px;@c:0px;@d:0px){
+    margin-top:@a;
+    margin-right:@b;
+    margin-bottom:@c;
+    margin-left:@d;
+}
+.border(@a;@b){
+    border: @a solid @b;
+}
+.fontSize(@font){
+    font-size:@font;
+}
+
